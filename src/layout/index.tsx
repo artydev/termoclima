@@ -1,6 +1,7 @@
 import Nav from '@/components/navigation';
 import Footer from '@/components/footer';
 
+import '@/styles/nav.css'
 import '@/styles/style.css';
 
 

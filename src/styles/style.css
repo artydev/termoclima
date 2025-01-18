@@ -14,7 +14,7 @@ html {
 :root {
   /* Color Variables */
   --base-green: hsl(120, 10%, 35%);
-  --navbar-background: hsl(120, 40%, 20%);
+  --navbar-background: #00A556;
   --hover-background: hsl(120, 40%, 28%);
   --button-background: var(--base-green);
   --button-hover-background: hsl(120, 45%, 25%);
@@ -70,7 +70,7 @@ h1 {
 
 
 
-
+ 
 
 
 
@@ -105,7 +105,8 @@ h1 {
 
 /* ===== Navbar Styles ===== */
 
-.navbar-container {
+
+.xnavbar {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -115,15 +116,14 @@ h1 {
   background-color: var(--navbar-background);
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(12px);
-}
-
-.navbar {
-  width: 85%;
-  max-width: 1200px;
+  width: 100%;
   padding: 15px;
   display: flex;
   align-items: center;
+  background-color: red;
+  justify-content: space-between;
 }
+
 
 .logo {
   font-size: 1.8rem;
