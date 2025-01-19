@@ -7,7 +7,7 @@ export default function Nav() {
                 <div class="navbar-top">
 
                     <div class="logo">
-                        <img src="/logo.png" />
+                       <a href="/"><img src="/logo.png" /></a>
                     </div>
 
                     <div class="navbar-search">

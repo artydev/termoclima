@@ -59,6 +59,23 @@
   text-decoration: underline;
 }
 
+.search_button {
+  border:none;
+  border-radius:50%;
+  background:#01A556;
+  color:white;
+  height:2.5rem;
+  width:2.5rem;
+  position:relative;
+  bottom:3px;
+  left:2px
+
+}
+
 input {
-  width: 100%;
+  width: 90%;
+  border:none;
+  margin-right:1rem;
+  margin-left:1rem;
+  outline: none;
 }
