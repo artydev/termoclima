@@ -8,6 +8,7 @@
   position: fixed;
   z-index: 1000;
   width: 100vw;
+  border-bottom: 1px solid white;
 }
 
 .logo {
@@ -45,7 +46,7 @@
   padding: 0.5rem;
   background: #007A36;
   font-size: 1.5rem;
-  border-top: 1px solid #01A55633;
+  border-top: 1px solid white;
 }
 
 .navbar-bottom a {
@@ -68,8 +69,8 @@
   width:2.5rem;
   position:relative;
   bottom:3px;
-  left:2px
-
+  left:2px;
+  border-top:1px solid white;
 }
 
 input {
