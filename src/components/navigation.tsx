@@ -1,3 +1,5 @@
+import SearchInput from "./searchinput.tsx"
+
 export default function Nav() {
     return (
         <>
@@ -9,7 +11,7 @@ export default function Nav() {
                     </div>
 
                     <div class="navbar-search">
-                        <a href="#home">Home</a>
+                        <SearchInput />
                     </div>
 
                     <div class="navbar-right">

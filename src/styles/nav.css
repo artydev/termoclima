@@ -1,18 +1,15 @@
-/* General Navbar Styling */
 :root {
-  --navbar-bg:#01A556;
+  --navbar-bg: #01A556;
 }
 
 .navbar {
-  background:  var(--navbar-bg);
+  background: var(--navbar-bg);
   font-family: Arial, sans-serif;
   position: fixed;
   z-index: 1000;
   width: 100vw;
 }
 
-
-/* Logo Section: Positioned on the left */
 .logo {
   flex: 1 1 0%;
 }
@@ -20,12 +17,9 @@
 .logo img {
   max-width: 20rem;
   position: relative;
-  top:0.155rem;
+  top: 0.155rem;
 }
 
-
-
-/* Top Row Styling */
 .navbar-top {
   display: flex;
   align-items: center;
@@ -33,18 +27,16 @@
 }
 
 .navbar-search {
-  text-align:center;
-  flex : 1 1 0%;
+  text-align: center;
+  flex: 1 1 0%;
 }
-
 
 .navbar-right {
-  flex : 1 1 0%;
-  text-align:right;
-  color:red;
+  flex: 1 1 0%;
+  text-align: right;
+  color: red;
   margin-right: 1rem;
 }
-
 
 .navbar-bottom {
   display: flex;
@@ -58,10 +50,15 @@
 
 .navbar-bottom a {
   color: white;
+  opacity: 0.89;
   text-decoration: none;
   font-weight: bold;
 }
 
 .navbar-bottom a:hover {
   text-decoration: underline;
+}
+
+input {
+  width: 100%;
 }
