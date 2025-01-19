@@ -60,11 +60,13 @@ h1 {
 
 
 .swiper-wrapper {
-  
+ margin-top:10px;
+
 }
 
 .swiper img {
   width:100%;
+  transform: scale(0.75);
 }
 
 /* ===== Content and Product Section ===== */
