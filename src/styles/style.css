@@ -78,22 +78,6 @@ h1 {
 
 
 
-.logo-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.logo-image {
-  width: 150px;
-  height: 150px;
-  opacity: 0.9;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  position: relative;
-  top: 1.5rem;
-}
 
 .parallax h2 {
   color: white;
@@ -125,44 +109,9 @@ h1 {
 }
 
 
-.logo {
-  font-size: 1.8rem;
-  color: var(--navbar-text-color);
-  font-weight: bold;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
-.nav-links {
-  flex-grow: 1;
-}
 
-.nav-links ul {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-}
 
-.nav-links li {
-  margin-left: 20px;
-}
-
-.nav-links li a {
-  color: var(--navbar-text-color);
-  text-decoration: none;
-  padding: 12px 20px;
-  display: block;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
-
-.nav-links li a:hover {
-  background-color: var(--hover-background);
-  border-radius: 3px;
-}
 
 /* Hamburger Menu */
 .hamburger {
