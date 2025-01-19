@@ -1,0 +1,2 @@
+sudo VBoxControl sharedfolder list
+sudo mount -t vboxsf Downloads  ~/windows
