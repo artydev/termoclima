@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "brisa": "0.2.3-canary.1",
+    "brisa-adapter-vercel": "^0.2.3",
     "bss": "^1.6.4"
   },
   "devDependencies": {
