@@ -3,11 +3,8 @@ import CounterServer from '@/components/counter-server';
 export default function Homepage() {
   return (
     <>
-      <section class="parallax">
-        <div class="logo-container">
-          <img src="https://via.placeholder.com/150x150?text=Logo" alt="TermoClima Logo" class="logo-image"></img>
-        </div>
-      </section>
+      
+
 
       <div class="content">
         <section id="home" class="home-section">

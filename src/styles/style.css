@@ -36,6 +36,7 @@ html {
 /* ===== Typography and Body ===== */
 
 body {
+
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   background-color: var(--background-color);
@@ -56,77 +57,14 @@ h1 {
  scroll-margin-top: 60px;
 }
 
-/* ===== Parallax Section ===== */
 
-.parallax {
-  background-image: url('https://images.pexels.com/photos/338936/pexels-photo-338936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
-  min-height: 75vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+
+.swiper-wrapper {
+  
 }
 
-
-
- 
-
-
-
-
-
-
-
-
-.parallax h2 {
-  color: white;
-  font-size: 2.5rem;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-/* ===== Navbar Styles ===== */
-
-
-.xnavbar {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  background-color: var(--navbar-background);
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12px);
-  width: 100%;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  background-color: red;
-  justify-content: space-between;
-}
-
-
-
-
-
-
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  margin-left: auto;
-}
-
-.hamburger .bar {
-  width: 25px;
-  height: 3px;
-  background-color: var(--navbar-text-color);
-  margin: 4px 0;
-  transition: all 0.3s ease;
+.swiper img {
+  width:100%;
 }
 
 /* ===== Content and Product Section ===== */

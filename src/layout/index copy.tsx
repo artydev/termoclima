@@ -22,41 +22,13 @@ export default function Layout({ children }: { children: JSX.Element }) {
           href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
           rel="stylesheet"
         />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body>
-
+        
         <header>
           <Nav />
         </header>
-
-        <div class="swiper">
-          <div class="swiper-wrapper" style="margin-top:150px">
-
-            <div class="swiper-slide">
-              <img src="1-1.webp"  />
-            </div>
-            <div class="swiper-slide">
-              <img src="2.webp"  />
-            </div>
-            <div class="swiper-slide">
-              <img src="3.webp"  />
-            </div>
-            <div class="swiper-slide">
-              <img src="4.webp"  />
-            </div>
-            <div class="swiper-slide">
-              <img src="5.webp"  />
-            </div>
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-
         <main>{children}</main>
         <Footer />
 
