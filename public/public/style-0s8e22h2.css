@@ -1,0 +1,506 @@
+/* ===== Global Styles ===== */
+
+/* Reset and Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color Variables */
+  --base-green: hsl(120, 10%, 35%);
+  --navbar-background: #00A556;
+  --hover-background: hsl(120, 40%, 28%);
+  --button-background: var(--base-green);
+  --button-hover-background: hsl(120, 45%, 25%);
+  --background-color: hsl(210, 20%, 95%);
+  --navbar-text-color: hsl(0, 0%, 100%);
+  --header-color: hsl(120, 45%, 35%);
+  --header-background: hsl(120, 40%, 25%);
+  --card-background: hsl(0, 0%, 100%);
+  --card-title-color: hsl(120, 30%, 15%);
+  --card-description-color: hsl(120, 30%, 35%);
+  --price-color: hsl(120, 50%, 35%);
+  --accent-color: hsl(30, 100%, 45%);
+  --warning-color: hsl(0, 100%, 50%);
+  --dropdown-background: hsl(120, 40%, 28%);
+  --input-background: hsl(210, 20%, 100%);
+  --input-border-color: hsl(120, 40%, 35%);
+}
+
+/* ===== Typography and Body ===== */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: #333;
+  margin: 0;
+}
+
+h1 {
+  margin-top: 4rem;
+}
+
+/* Add scroll-margin to offset fixed navbar */
+[id] {
+  scroll-margin-top: 100px;
+}
+
+[id="contact"]  {
+ scroll-margin-top: 60px;
+}
+
+/* ===== Parallax Section ===== */
+
+.parallax {
+  background-image: url('https://images.pexels.com/photos/338936/pexels-photo-338936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+  min-height: 75vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+
+ 
+
+
+
+
+
+
+
+.logo-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.logo-image {
+  width: 150px;
+  height: 150px;
+  opacity: 0.9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  top: 1.5rem;
+}
+
+.parallax h2 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* ===== Navbar Styles ===== */
+
+
+.xnavbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--navbar-background);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  background-color: red;
+  justify-content: space-between;
+}
+
+
+.logo {
+  font-size: 1.8rem;
+  color: var(--navbar-text-color);
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links {
+  flex-grow: 1;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: var(--navbar-text-color);
+  text-decoration: none;
+  padding: 12px 20px;
+  display: block;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: var(--hover-background);
+  border-radius: 3px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--navbar-text-color);
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* ===== Content and Product Section ===== */
+
+.content {
+  margin-top: 100px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1640px;
+  margin: 0 auto;
+}
+
+.product-section h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: var(--header-color);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.53s ease, box-shadow 0.53s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--card-title-color);
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: var(--card-description-color);
+  margin-bottom: 15px;
+}
+
+.product-card .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--price-color);
+  margin-bottom: 15px;
+}
+
+.product-card .buy-btn {
+  padding: 10px 20px;
+  background-color: var(--button-background);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card .buy-btn:hover {
+  background-color: var(--button-hover-background);
+}
+
+/* ===== Contact Page and Form Styles ===== */
+
+.contact-page {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-section h1 {
+  font-size: 2.5rem;
+  color: var(--header-color);
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  color: var(--card-description-color);
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--card-background);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  color: var(--card-title-color);
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+  background-color: var(--input-background);
+  color: #333;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--header-color);
+  outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  padding: 10px 20px;
+  background-color: var(--button-background);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--button-hover-background);
+}
+
+
+/* ===== Scroll to Top Button ===== */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--button-background);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: var(--button-hover-background);
+}
+
+
+/* ===== Footer Styling ===== */
+
+.footer {
+  background-color: var(--navbar-background);
+  color: var(--navbar-text-color);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--header-color);
+}
+
+.footer-logo p {
+  font-size: 1rem;
+  color: var(--card-description-color);
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 10px 0;
+}
+
+.footer-links ul li a {
+  color: var(--navbar-text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: var(--button-hover-background);
+}
+
+.footer-contact h3,
+.footer-social h3 {
+  margin-bottom: 10px;
+  color: var(--header-color);
+}
+
+.footer-contact p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* ===== Social Icons ===== */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+}
+
+/* ===== Footer Bottom Section ===== */
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid var(--hover-background);
+  padding-top: 10px;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: var(--card-description-color);
+}
+
+
+/* Responsive Design */
+@media (max-width: 960px) {
+
+  /* Hamburger Menu appears */
+  .hamburger {
+      display: flex;
+  }
+
+  /* Hide the nav links by default */
+  .nav-links {
+      display: none;
+      /* Hidden by default */
+      flex-direction: column;
+      /* Stack links vertically */
+      width: 100%;
+      /* Full width */
+      background-color: var(--navbar-background);
+      /* Forest green with transparency */
+      position: absolute;
+      top: 62px;
+      /* Adjust based on your navbar height */
+      left: 0;
+      z-index: 1000;
+      padding: 10px 0;
+      /* Add padding for the dropdown */
+  }
+
+  /* Show nav when hamburger is clicked */
+  .nav-links.show {
+      display: flex;
+      /* Show nav when hamburger is clicked */
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links ul {
+      display: block;
+
+  }
+
+  .nav-links li {
+      margin: 10px 0;
+      /* Space between vertical items */
+      text-align: center;
+      /* Center text in the vertical menu */
+  }
+
+  .nav-links li a {
+      padding: 15px 20px;
+  }
+}
+
+/* ===== Responsive Styling for Footer ===== */
+
+@media (max-width: 768px) {
+  .footer-content {
+      grid-template-columns: 1fr;
+      /* Stack all footer sections vertically on small screens */
+  }
+}
