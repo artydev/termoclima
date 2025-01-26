@@ -31,6 +31,7 @@ export default function Layout({ children }: { children: JSX.Element }) {
       </head>
       <body>
 
+      
         <header>
           <Nav />
         </header>

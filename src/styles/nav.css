@@ -1,86 +1,126 @@
-:root {
-  --navbar-bg: #01A556;
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%; /* Ensure it stays within viewport */
+  height: 100%; /* Optional, for completeness */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Elegant, clean font */
+  color: #333; /* Text color */
 }
 
-.navbar {
-  background: var(--navbar-bg);
-  font-family: Arial, sans-serif;
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* Consistent box-sizing */
+}
+
+/* Wrapper */
+.wrapper {
+  width: 100%; /* Full-width wrapper */
+  background-color: #f8f8f8; /* Light background to make content pop */
   position: fixed;
-  z-index: 1000;
-  width: 100vw;
-  border-bottom: 1px solid white;
+  z-index: 100;
 }
 
-.logo {
-  flex: 1 1 0%;
+/* Topbar Styles */
+.topbar {
+  display: flex;
+  justify-content: space-between; /* Align left and right sections to the edges */
+  align-items: center; /* Vertically center the sections */
+  padding: 1rem 2rem;
+  background: #01A556; /* Elegant dark color */
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-.logo img {
-  max-width: 20rem;
-  position: relative;
-  top: 0.155rem;
-}
-
-.navbar-top {
+.left, .center, .right {
   display: flex;
   align-items: center;
-  padding: 0.5rem;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
 }
 
-.navbar-search {
-  text-align: center;
-  flex: 1 1 0%;
+.left {
+  justify-content: flex-start;
+  width: calc(100vw / 3);
 }
 
-.navbar-right {
-  flex: 1 1 0%;
-  text-align: right;
-  color: white;
-  margin-right: 1rem;
+.center {
+  justify-content: center;
 }
 
-.navbar-bottom {
+.right {
+  justify-content: flex-end;
+    width: calc(100vw / 3);
+}
+
+/* Subtop Styles */
+.subtop {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  padding: 0.5rem;
-  background: #007A36;
-  font-size: 1.5rem;
-  border-top: 1px solid white;
+  align-items:center;
+  background-color: #007A36; /* Darker background for contrast */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  text-align: center; /* Center text */
+  padding:1rem;
+  gap:1rem;
 }
 
-.navbar-bottom a {
-  color: white;
-  opacity: 0.89;
-  text-decoration: none;
-  font-weight: bold;
+.subtop article {
+  background: #ffffff;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 200px;
+
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
 }
 
-.navbar-bottom a:hover {
-  text-decoration: underline;
+.subtop article:hover {
+  transform: translateY(-10px); /* Hover effect: lifting the card */
 }
 
-.search_button {
-  border:none;
-  border-radius:50%;
-  background:#01A556;
-  color:white;
-  height:2.5rem;
-  width:2.5rem;
-  position:relative;
-  bottom:3px;
-  left:2px;
-  border-top:1px solid white;
-}
-
-input {
-  width: 90%;
-  border:none;
-  margin-right:1rem;
-  margin-left:1rem;
-  outline: none;
-}
-
-input::placeholder {
+.subtop article h4 {
   font-size: 1.25rem;
+  color: #2c3e50;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.subtop article p {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+/* Optional responsiveness for smaller screens */
+@media (max-width: 960px) {
+  /* Topbar on mobile */
+  .topbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 1.5rem;
+  }
+
+  .topbar .left,
+  .topbar .center,
+  .topbar .right {
+    flex: 1; /* Ensure sections fill the width */
+    justify-content: center; /* Center content */
+    margin-bottom: 1rem; /* Space between sections */
+  }
+
+  /* Subtop on mobile */
+  .subtop {
+    flex-direction: column; /* Stack subtop items vertically */
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    justify-content: center;
+  }
+
+  .subtop article {
+    width: 90%; /* Full width for smaller screens */
+    margin: 0 auto; /* Center each article */
+  }
 }

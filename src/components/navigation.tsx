@@ -3,34 +3,36 @@ import SearchInput from "./searchinput.tsx"
 export default function Nav() {
     return (
         <>
-            <nav class="navbar">
-                <div class="navbar-top">
-
-                    <div class="logo">
-                       <a href="/"><img src="/logo.png" /></a>
+            <header class="wrapper">
+                <div class="topbar">
+                    <div class="left">
+                       <img src="logo.png" width="50%" style="min-width:220px"/>
                     </div>
-
-                    <div class="navbar-search">
-                        <SearchInput />
+                    <div class="center">
+                        <div>
+                            CENTER
+                        </div>
                     </div>
-
-                    <div class="navbar-right">
-                        A Proposito
+                    <div class="right">
+                        RIGHT
                     </div>
                 </div>
-                <div class="navbar-bottom">
-                    <a href="#prodotti">Prodotti</a>
-                    <a href="#promozioni">Promozioni</a>
-                    <a href="#assistenza">Assistenza</a>
-                    <a href="#contattaci">Contattaci</a>
-                </div>
-            </nav>
 
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+                <section class="subtop">
+                    <article>
+                        Prodotti
+                    </article>
+                    <article>
+                        Promozioni
+                    </article>
+                    <article>
+                        Assistenza
+                    </article>
+                    <article>
+                        Contattacci
+                    </article>
+                </section>
+            </header>
 
         </>
     );
